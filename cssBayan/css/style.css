@@ -8,17 +8,60 @@ html {
     box-sizing: inherit;
 }
 
-I body {
+ body {
     padding: 0;
     margin: 0;
     font-family: "Arial", sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #fff;
+    background-color: #07141d;
     color: #222;
 }
 
 img {
     max-width: 100%;
     height: auto;
+}
+#accordion{
+    margin: 100px auto;
+    width:600px;
+}
+#accordion li{
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #fff
+}
+#accordion li label{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500 ;
+    cursor: pointer;
+    color: #c20000;
+}
+#accordion li label svg{
+    transform: rotate(180deg);
+    width: 22px;
+    color: #333;
+}
+#accordion label + input[type="radio"]{
+    display: none;
+}
+#accordion .content{
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+text-align: center;
+}
+#accordion label + input[type="radio"]:checked + .content{
+    max-height: 400px;
+}
+.content img{
+ max-width: 350px;
 }
