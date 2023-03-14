@@ -1,0 +1,109 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all .2s ease-in-out;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+ body {
+
+    font-family: "Arial", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #07141d;
+    color: #222;
+    text-align: center;
+}
+h1{
+color:white;
+font-size: 3rem;
+}
+.main{
+ padding: 2.5rem;
+ text-align: center;
+
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+#accordion{
+    margin: 2rem auto;
+    width:50%;
+}
+#accordion li{
+    list-style: none;
+    padding: .625rem;
+    margin-bottom: .625rem;
+    border-radius: 4px;
+    background-color: #fff
+}
+#accordion li label{
+    display: flex;
+    padding: .625rem auto;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    font-weight: 500 ;
+    cursor: pointer;
+    color: #c20000;
+}
+#accordion li label svg{
+    transform: rotate(180deg);
+    width: 22px;
+    color: #333;
+}
+#accordion label + input[type="radio"]{
+    height: 0;
+    overflow: hidden;
+}
+#accordion .content{
+    padding: 0 .625rem;
+    line-height: 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+text-align: center;
+}
+#accordion label + input[type="radio"]:checked + .content{
+    max-height: 40%;
+}
+#accordion label + input[type="radio"]:hover + .content{
+    max-height: 40%;
+}
+
+.content img{
+ max-width: 50%;
+}
+@media screen and (min-width:320px) and (max-width:405px){
+    #accordion{
+        width:80%;
+    }
+
+    h1{
+        font-size:1.5rem;
+    }
+    #accordion li label{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:405px) and (max-width:630px) {
+    #accordion{
+        max-width:80%;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    #accordion li label{
+        font-size: 1.125rem;
+    }
+}
